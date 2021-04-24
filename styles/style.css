@@ -38,12 +38,16 @@ h3 {
     background-color: #f1f1f1;
     border: 1px solid black;
     color: #1f1f1f;
+    height: 30px;
     border-radius: 5px;
     margin-bottom: 20px;
 }
 
 .submit_button {
     background-color: blueviolet;
+    width: 150px;
+    height: 30px;
+    margin: 0 auto 0 auto;
     border: 1px solid black;
     border-radius: 5px;
 }
