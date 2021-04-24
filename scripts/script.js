@@ -1,9 +1,9 @@
-
+// Set selectors for the to-do list and submit button
 let toDoList = document.querySelector('.to-do_list');
 
 let submit = document.querySelector('.submit_button');
 
-// Function to add input value to to-do list
+// Click even for the submit button that adds input value to to-do list
 
 submit.addEventListener('click', (e) => {
     e.preventDefault();
@@ -24,22 +24,11 @@ submit.addEventListener('click', (e) => {
 
 // Click event to remove list item
 
-let toDoItem = document.querySelectorAll('.delete-btn');
-
-var deletes = document.querySelectorAll('.removeBtn')
-// Iterate all nodes
-deletes.forEach(btn => {
-  // Attach event listener. Note to preserve the button this-reference
-  // by using the non-shorthand function
-  btn.addEventListener('click', function() {
-    var li = this.parentNode
-    li.remove()
-  })
+toDoList.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.target.style.textDecoration = "line-through";
+    setInterval(function() {
+        e.target.remove();
+    }, 1000);
 })
 
-
-
-// toDoItem.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     toDoItem.remove();
-// })
